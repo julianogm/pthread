@@ -4,7 +4,7 @@ Trabalho sobre pthreads para a disciplina de Tópicos em Redes.
 O código inverte os numeros de um determinado arquivo de entrada (gerado pela funçao gerar_entrada) e salva isso em um arquivo de saida.
 Isso é feito utilizando buffers e mutexes nas 3 funções principais (leitura, escrita e processamento). 
 
-### h5 Na função de leitura:
+##### Na função de leitura:
             Loop interno que fica verificando se existem dados para serem lidos no arquivo.
             Trava o mutex do buffer de entrada logo no inicio dos loops, e destrava no final destes.
             Le o buffer estiver vazio, entao verifica se o arquivo ainda tem dados.
@@ -13,7 +13,7 @@ Isso é feito utilizando buffers e mutexes nas 3 funções principais (leitura, 
             de encerramento para 2, indicando que acabou a leitura, e sai do loop interno,
             ficando apenas no loop externo esperando a finalização da thread.
 
-### h5 Na função de escrita: 
+##### Na função de escrita: 
             Loop interno que fica verificando se existem dados para serem lidos no arquivo.
             Trava o mutex do buffer de entrada logo no inicio dos loops, e destrava no final destes.
             Le o buffer estiver vazio, entao verifica se o arquivo ainda tem dados.
@@ -22,7 +22,7 @@ Isso é feito utilizando buffers e mutexes nas 3 funções principais (leitura, 
             de encerramento para 2, indicando que acabou a leitura, e sai do loop interno,
             ficando apenas no loop externo esperando a finalização da thread.
 
-### h5 Na função de processamento:
+##### Na função de processamento:
             Dois loops internos, onde fica verificando se o buffer de saída está vazio
             e outro se o buffer de entrada está cheio.
             Os mutexes dos buffers são travados antes de cada verificação e destravados após as mesmas.                                                                                                     
